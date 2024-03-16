@@ -1,0 +1,186 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background: #6c7b2a;
+  overflow: hidden;
+}
+
+.game-score {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  color: azure;
+  background-color: rgb(248, 12, 12);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  font-size: 15px;
+}
+
+.car {
+  position: absolute;
+  width: 80px;
+  transform: translateY(75vh);
+  
+}
+
+.road {
+  background: #817f84;
+  width: 300px;
+  height: 100vh;
+}
+
+.tree {
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+}
+
+.tree1 {
+  transform: translate(-230px, -15vh);
+  width: 250px;
+}
+
+.tree2 {
+  transform: translate(-220px, 30vh);
+  width: 200px;
+}
+
+.tree3 {
+  transform: translate(-220px, 75vh);
+  width: 200px;
+}
+
+.tree4 {
+  transform: translate(240px, -25vh);
+  width: 200px;
+}
+
+.tree5 {
+  transform: translate(240px, 40vh);
+  width: 250px;
+}
+
+.tree6 {
+  transform: translate(240px, 75vh);
+  width: 300px;
+}
+
+.game-btn {
+  position: fixed;
+  right: 25px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.game-btn:hover {
+  transform: scale(1.2);
+}
+
+.game-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.game-btn .play {
+  display: none;
+}
+
+.danger {
+  position: absolute;
+  width: 80px;
+  transform: translate(-100px, -250vh);
+}
+
+.arrow {
+  position: absolute;
+  width: 50px;
+  transform: translate(10px, -600vh);
+}
+
+.coin {
+  position: absolute;
+  width: 50px;
+  transform: translate(50px, -100vh);
+  
+}
+
+.backdrop {
+  display: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(5, 5, 5, 0.743);
+  z-index: 50;
+}
+
+.container {
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 150px;
+}
+.restart-button {
+  cursor: pointer;
+  background: rgb(129, 20, 20);
+  color: aliceblue;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  padding: 8px 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+.finish-text {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+.finish-text::before,
+.finish-text::after {
+  content: "😡";
+  display: block;
+  margin-left: 10px;
+  font-size: 35px;
+  animation: ease 0.3s jump infinite;
+  animation-direction: alternate;
+}
+.finish-text::before {
+  animation-delay: 0.1s;
+  margin-right: 10px;
+}
+
+.finish-text span {
+  margin-left: 10px;
+  color: red;
+  font-size: 25px;
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
